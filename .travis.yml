@@ -42,5 +42,16 @@ script:
     && (echo 'PHP MySQL installed' && exit 0)
     || (echo 'PHP MySQL not installed' && exit 1)  
   - "apachectl -v"
-  - "apachectl -t" 
+  - "apachectl -t"
+  - >
+    apachectl -M
+    | grep -q 'php'
+    && (echo 'PHP module for Apache installed' && exit 0)
+    || (echo 'HP module for Apache not installed' && exit 1)
   - "curl http://localhost/"  
+
+notifications:
+  email:
+    recipients:
+      - damaya@aplyca.com
+    on_failure: change

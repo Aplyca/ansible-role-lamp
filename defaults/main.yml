@@ -4,6 +4,8 @@ apache:
   ServerSignature: "Off"
 
 php:
+  modules:
+    - php5-mysql
   expose_php: 'Off'
   max_execution_time: '120'
   memory_limit: '512M'
