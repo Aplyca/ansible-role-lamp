@@ -3,6 +3,6 @@
   remote_user: root
   pre_tasks:
     - name: Installing dependencies with Ansible Galaxy
-      command: ansible-galaxy install -r dependencies.txt
+      shell: ansible-galaxy install -r dependencies.txt
   roles:
     - ansible-role-lamp
