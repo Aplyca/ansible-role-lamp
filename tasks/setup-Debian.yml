@@ -16,4 +16,6 @@
 - name: Enable custom configuration in Apache
   sudo: yes
   command: a2enconf custom
-  notify: reload apache  
+  changed_when: False
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version | version_compare('14.04', 'ge')
+  
