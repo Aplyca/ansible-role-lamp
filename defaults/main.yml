@@ -1,0 +1,12 @@
+---
+apache:
+  ServerTokens: Prod
+  ServerSignature: "Off"
+
+php:
+  expose_php: 'Off'
+  max_execution_time: '120'
+  memory_limit: '512M'
+  variables_order: 'EGPCS'
+  Date:
+    timezone: 'America/New_York'

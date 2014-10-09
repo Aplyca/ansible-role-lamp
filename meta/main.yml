@@ -1,0 +1,24 @@
+---
+dependencies:
+  - { role: mauricios.MySQL }
+  - { role: mauricios.Apache }
+  - { role: mauricios.PHP }
+
+galaxy_info:
+  author: mauricios
+  description: PHP for Debian/Ubuntu.
+  company: "Aplyca SAS"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.4
+  platforms:
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: CentOS
+    versions:
+    - all    
+  categories:
+    - web

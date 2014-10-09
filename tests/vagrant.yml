@@ -1,0 +1,4 @@
+---
+- hosts: ansible-role-php.vagrant
+  roles:
+    - mauricios.LAMP

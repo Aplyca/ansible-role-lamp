@@ -1,0 +1,19 @@
+---
+- name: Ensure Apache PHP 5 module is present using apt
+  sudo: yes
+  apt: name={{ item }} state=present
+  with_items:
+  - libapache2-mod-php5
+  notify: restart apache
+  
+- name: Add custom configuration for Apache
+  sudo: yes
+  template: 
+    src: "etc/apache2/conf-available/custom.conf.j2"
+    dest: "{{ apache['server_root'] }}/{{ apache['conf_available_path'] }}/custom.conf"
+  notify: reload apache
+
+- name: Enable custom configuration in Apache
+  sudo: yes
+  command: a2enconf custom
+  notify: reload apache  
