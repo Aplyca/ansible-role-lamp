@@ -18,6 +18,7 @@ install:
 
 script:
   - "cd tests"
+  - "ansible --version"
   # Install dependencies
   - ansible-galaxy install -r dependencies.txt
   # Check the role/playbook's syntax.
