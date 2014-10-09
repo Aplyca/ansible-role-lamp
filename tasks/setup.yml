@@ -1,0 +1,7 @@
+---
+- name: Add custom configuration for Apache
+  sudo: yes
+  template:
+    src: "etc/apache2/conf-available/custom.conf.j2"
+    dest: "{{ apache['server_root'] }}/{{ apache['conf_available_path'] }}/custom.conf"
+  notify: reload apache

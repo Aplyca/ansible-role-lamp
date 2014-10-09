@@ -50,8 +50,3 @@ script:
     || (echo 'HP module for Apache not installed' && exit 1)
   - "curl http://localhost/"  
 
-notifications:
-  email:
-    recipients:
-      - damaya@aplyca.com
-    on_failure: change

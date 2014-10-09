@@ -1,7 +1,9 @@
 ---
 - name: Ensure Apache PHP 5 module is present using yum
   sudo: yes
-  yum: name={{ item }} state=present
-  with_items:
-    - libapache2-mod-php5
-  notify: restart apache
+  yum:
+    name: "{{ php['package'] }}"
+    state: present
+  notify: reload apache
+
+- include: setup.yml
