@@ -6,7 +6,7 @@ dependencies:
 
 galaxy_info:
   author: mauricios
-  description: PHP for Debian/Ubuntu.
+  description: LAMP server for Debian/Ubuntu.
   company: "Aplyca SAS"
   license: "license (BSD, MIT)"
   min_ansible_version: 1.4
