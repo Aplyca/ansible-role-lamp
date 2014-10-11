@@ -9,7 +9,7 @@ before_install:
   - uname -a
   - cat /proc/version
   - sudo apt-get update -qq
-  - ln -s ansible-role-lamp ../mauricios.PHP
+  - ln -s ansible-role-lamp ../mauricios.LAMP
 
 install:
   - sudo apt-get install -y curl
