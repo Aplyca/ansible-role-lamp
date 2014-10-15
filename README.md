@@ -6,19 +6,27 @@ Ansible Role that installs an configure a LAMP server on Debian/RedHat.
 
 ## Requirements
 
-configured ansible.cfg
+Use hash behavior for variables in ansible.cfg, see: https://github.com/Aplyca/ansible-role-lamp/blob/master/tests/ansible.cfg
 
 ## Role Variables
 
-TODO: add variables documentation
+See default variables: https://github.com/Aplyca/ansible-role-lamp/blob/master/defaults/main.yml
 
 ## Dependencies
 
-None.
+Install dependencies using Ansible galaxy
 
-## Example Playbook
+   ansible-galaxy install -r dependencies.txt
 
-TODO:Add example playbook
+## Test
+
+Use Vagrant to test the role:
+
+   cd tests
+   vagrant box add ubuntu/trusty64
+   vagrant up
+
+You should see a LAMP server on http://localhost:8080
 
 ## License
 
