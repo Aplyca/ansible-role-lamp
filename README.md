@@ -16,15 +16,15 @@ See default variables: https://github.com/Aplyca/ansible-role-lamp/blob/master/d
 
 Install dependencies using Ansible galaxy
 
-   ansible-galaxy install -r dependencies.txt
+`ansible-galaxy install -r dependencies.txt`
 
 ## Test
 
 Use Vagrant to test the role:
 
-   cd tests
-   vagrant box add ubuntu/trusty64
-   vagrant up
+`cd tests`
+`vagrant box add ubuntu/trusty64`
+`vagrant up`
 
 You should see a LAMP server on http://localhost:8080
 
