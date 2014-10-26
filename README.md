@@ -2,11 +2,25 @@
 
 [![Build Status](https://travis-ci.org/Aplyca/ansible-role-lamp.svg?branch=master)](https://travis-ci.org/Aplyca/ansible-role-lamp)
 
-Ansible Role that installs an configure a LAMP server on Debian/RedHat.
+Ansible Role that installs and configure LAMP Stack on Debian/Ubuntu.
 
 ## Requirements
 
-Use hash behavior for variables in ansible.cfg, see: https://github.com/Aplyca/ansible-role-lamp/blob/master/tests/ansible.cfg
+Use hash behavior for variables in ansible.cfg
+See example: https://github.com/Aplyca/ansible-role-lamp/blob/master/tests/ansible.cfg
+See official docs: http://docs.ansible.com/intro_configuration.html#hash-behaviour
+
+## Installation
+
+Using ansible galaxy:
+```bash
+ansible-galaxy install mauricios.LAMP
+```
+You can add this role as a dependency for other roles, add the role to the meta/main.yml file of your own role:
+```yaml
+dependencies:
+  - { role: mauricios.LAMP }
+```
 
 ## Role Variables
 
@@ -18,15 +32,15 @@ Install dependencies using Ansible galaxy
 
 `ansible-galaxy install -r dependencies.txt`
 
-## Test
+## Testing
 
 Use Vagrant to test the role:
 
-`cd tests`
-`vagrant box add ubuntu/trusty64`
-`vagrant up`
-
-You should see a LAMP server on http://localhost:8080
+```bash
+cd tests;
+vagrant box add ubuntu/trusty64;
+vagrant up;
+```
 
 ## License
 
