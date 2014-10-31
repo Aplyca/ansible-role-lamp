@@ -1,8 +1,8 @@
 ---
 dependencies:
-  - { role: mauricios.MySQL }
-  - { role: mauricios.Apache }
-  - { role: mauricios.PHP }
+  - { role: mauricios.MySQL, tags: ["mysql"] }
+  - { role: mauricios.Apache, tags: ["apache"] }
+  - { role: mauricios.PHP, tags: ["php"] }
 
 galaxy_info:
   author: mauricios
