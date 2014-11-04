@@ -2,7 +2,7 @@
 - name: Ensure Apache PHP 5 module is present using yum
   sudo: yes
   yum:
-    name: "{{ php['package'] }}"
+    name: "{{ php_package }}"
     state: present
   notify: reload apache
 
