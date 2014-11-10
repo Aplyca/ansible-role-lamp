@@ -2,25 +2,30 @@
 language: python
 python: "2.7"
 
+addons:
+  hosts:
+    - myapp.com
+
+notification:
+  email: false
+
 env:
   - PLAYBOOK=playbook.yml
 
 before_install:
-  - uname -a
-  - cat /proc/version
   - sudo apt-get update -qq
-  - ln -s ansible-role-lamp ../mauricios.LAMP
-
-install:
   - sudo apt-get install -y curl
 
+install:
   # Install Ansible.
   - sudo pip install paramiko PyYAML jinja2 httplib2
   - sudo pip install ansible
 
+before_script:
+  - ln -s ansible-role-lamp ../mauricios.LAMP
+
 script:
   - "cd tests"
-  - "ansible --version"
   # Install dependencies
   - ansible-galaxy install -r dependencies.txt
   # Check the role/playbook's syntax.
@@ -51,5 +56,5 @@ script:
     | grep -q 'php'
     && (echo 'PHP module for Apache installed' && exit 0)
     || (echo 'HP module for Apache not installed' && exit 1)
-  - "curl http://localhost/"  
+  - "curl http://myapp.com/"
 
