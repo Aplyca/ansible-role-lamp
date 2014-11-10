@@ -26,8 +26,6 @@ before_script:
 
 script:
   - "cd tests"
-  # Install dependencies
-  - ansible-galaxy install -r dependencies.txt
   # Check the role/playbook's syntax.
   - "ansible-playbook $PLAYBOOK --syntax-check"
 
