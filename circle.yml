@@ -14,7 +14,7 @@ machine:
 
 test:
   pre:
-    - sudo ln -s ansible-role-mysql ../../mauricios.MySQL
+    - sudo ln -s ansible-role-lamp ../../mauricios.LAMP
   override:
     - ansible-playbook $PLAYBOOK --syntax-check
     - ansible-playbook $PLAYBOOK --connection=local
