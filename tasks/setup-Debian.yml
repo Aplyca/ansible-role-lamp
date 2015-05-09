@@ -1,9 +1,11 @@
 ---
 - name: Ensure Apache PHP 5 module is present using apt
   sudo: yes
-  apt: name={{ item }} state=present
+  apt:
+    name: "{{ item }}"
+    state: present
   with_items:
-  - libapache2-mod-php5
+    - libapache2-mod-php5
   notify: restart apache
 
 - include: setup.yml
