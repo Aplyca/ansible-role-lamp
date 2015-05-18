@@ -3,9 +3,9 @@ apache:
   ServerTokens: Prod
   ServerSignature: "Off"
 
-php_modules:
-    20: mysql
 php:
+  modules:
+    20: mysql
   expose_php: 'Off'
   max_execution_time: '120'
   memory_limit: '256M'

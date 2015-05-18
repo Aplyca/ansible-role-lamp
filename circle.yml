@@ -21,9 +21,4 @@ test:
     - ansible-playbook $PLAYBOOK --syntax-check
     - ansible-playbook $PLAYBOOK --connection=local
     - "ansible-playbook $PLAYBOOK --connection=local | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)"
-    - mysql -V
-    - apachectl -v
-    - php -v
-    - php -i | grep -q 'mysql' && (echo 'PHP MySQL installed' && exit 0) || (echo 'PHP MySQL not installed' && exit 1)
-    - apachectl -M | grep -q 'php' && (echo 'PHP module for Apache installed' && exit 0) || (echo 'HP module for Apache not installed' && exit 1)
-    - curl http://myapp.com
+    - "./test.sh"

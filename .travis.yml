@@ -41,19 +41,5 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
 
   # Request a page via Apache, to make sure Apache is running and responds.
-  - "mysql -V"
-  - "php -v"
-  - >
-    php -i
-    | grep -q 'mysql'
-    && (echo 'PHP MySQL installed' && exit 0)
-    || (echo 'PHP MySQL not installed' && exit 1)  
-  - "apachectl -v"
-  - "apachectl -t"
-  - >
-    apachectl -M
-    | grep -q 'php'
-    && (echo 'PHP module for Apache installed' && exit 0)
-    || (echo 'HP module for Apache not installed' && exit 1)
-  - "curl http://myapp.com/"
+  - "./test.sh"
 
