@@ -1,11 +1,11 @@
 ---
 dependencies:
-  - { role: mauricios.MySQL, tags: ["mysql"] }
-  - { role: mauricios.Apache, tags: ["apache"] }
-  - { role: mauricios.PHP, tags: ["php"] }
+  - { role: aplyca.MySQL, tags: ["mysql"] }
+  - { role: aplyca.Apache, tags: ["apache"] }
+  - { role: aplyca.PHP, tags: ["php"] }
 
 galaxy_info:
-  author: mauricios
+  author: aplyca
   description: LAMP server for Debian/Ubuntu.
   company: "Aplyca SAS"
   license: "license (BSD, MIT)"

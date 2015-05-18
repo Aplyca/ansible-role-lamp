@@ -22,7 +22,7 @@ install:
   - sudo pip install ansible
 
 before_script:
-  - ln -s ansible-role-lamp ../mauricios.LAMP
+  - ln -s ansible-role-lamp ../aplyca.LAMP
 
 script:
   - "cd tests"

@@ -14,7 +14,7 @@ machine:
 
 test:
   pre:
-    - sudo ln -s ansible-role-lamp ../../mauricios.LAMP
+    - sudo ln -s ansible-role-lamp ../../aplyca.LAMP
   override:
     # Install dependencies
     - ansible-galaxy install -r dependencies.txt
