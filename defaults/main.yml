@@ -1,8 +1,4 @@
 ---
-apache:
-  ServerTokens: Prod
-  ServerSignature: "Off"
-
 php:
   modules:
     20: mysql
