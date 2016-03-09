@@ -1,18 +1,15 @@
 ---
 - name: Ensure Apache PHP 5 module is present using apt
-  sudo: yes
+  become: yes
   apt:
-    name: "{{ item }}"
+    name: libapache2-mod-php5
     state: present
-  with_items:
-    - libapache2-mod-php5
   notify: restart apache
 
 - include: setup.yml
 
 - name: Enable custom configuration in Apache
-  sudo: yes
+  become: yes
   command: a2enconf custom
   changed_when: False
   when: ansible_distribution == "Ubuntu" and ansible_distribution_version | version_compare('14.04', 'ge')
-  

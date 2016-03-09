@@ -1,10 +1,9 @@
 ---
 - name: Make sure the custom enabled configuration are present
-  sudo: yes
+  become: yes
   file:
-    src: "../{{ apache['conf_available_path'] }}/custom.conf"
-    path: "{{ apache['server_root'] }}/{{ apache['conf_enabled_path'] }}/z20-custom.conf"
+    src: "../{{ apache.conf_available_path }}/custom.conf"
+    path: "{{ apache.server_root }}/{{ apache.conf_enabled_path }}/z20-custom.conf"
     state: link
     force: yes
-  notify: reload apache    
-  
+  notify: reload apache

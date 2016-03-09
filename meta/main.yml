@@ -1,8 +1,8 @@
 ---
 dependencies:
-  - { role: aplyca.MySQL, tags: ["mysql"] }
-  - { role: aplyca.Apache, tags: ["apache"] }
-  - { role: aplyca.PHP, tags: ["php"] }
+  - { role: Aplyca.MySQL, tags: ["mysql"] }
+  - { role: Aplyca.Apache, tags: ["apache"] }
+  - { role: Aplyca.PHP, tags: ["php"] }
 
 galaxy_info:
   author: aplyca
@@ -19,6 +19,6 @@ galaxy_info:
     - all
   - name: CentOS
     versions:
-    - all    
+    - all
   categories:
     - web
