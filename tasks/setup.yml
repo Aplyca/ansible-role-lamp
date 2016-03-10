@@ -1,6 +1,6 @@
 ---
 - name: Add custom configuration for Apache
-  sudo: yes
+  become: yes
   template:
     src: "custom.conf.j2"
     dest: "{{ apache.server_root }}/{{ apache.conf_available_path }}/custom.conf"

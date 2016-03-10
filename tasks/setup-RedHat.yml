@@ -1,6 +1,6 @@
 ---
 - name: Ensure Apache PHP 5 module is present using yum
-  sudo: yes
+  become: yes
   yum:
     name: "{{ php_package }}"
     state: present
