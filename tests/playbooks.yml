@@ -1,0 +1,18 @@
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+    - name: Test if Apache is installed and running
+      uri:
+        url: "http://localhost"
+    - name: Test if MySQL extension for PHP is installed
+      shell: "php -i"
+      register: result_php
+      failed_when: "'mysql' not in result_php.stdout"
+    - name: Test if PHP module for Apache is installed
+      shell: "apachectl -M"
+      register: result_apache
+      failed_when: "'php' not in result_php.stdout"
+    - name: Test if MySQL is running
+      become: yes
+      shell: "mysqladmin status"  

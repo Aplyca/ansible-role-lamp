@@ -1,3 +1,0 @@
-aplyca.MySQL
-aplyca.Apache
-aplyca.PHP

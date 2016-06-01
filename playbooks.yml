@@ -1,0 +1,5 @@
+---
+- name: Provision LAMP web server
+  hosts: all
+  roles:
+    - { role: Aplyca.LAMP, tags: ["lamp"] }
