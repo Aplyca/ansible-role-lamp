@@ -5,7 +5,7 @@ dependencies:
   - { role: Aplyca.PHP, tags: ["php"] }
 
 galaxy_info:
-  author: aplyca
+  author: Aplyca
   description: LAMP server for Debian/Ubuntu.
   company: "Aplyca SAS"
   license: "license (BSD, MIT)"
