@@ -34,16 +34,20 @@ See default variables: https://github.com/Aplyca/ansible-role-lamp/blob/master/d
 
 Install dependencies using Ansible galaxy
 
-`ansible-galaxy install -r dependencies.txt`
+`ansible-galaxy install -r roles/requirements.yml`
 
 ## Testing
 
 Use Vagrant to test the role:
 
 ```bash
-cd tests;
-vagrant box add ubuntu/trusty64;
-vagrant up;
+tests/vagrant.sh
+```
+
+Use Docker to test the role:
+
+```bash
+tests/docker.sh
 ```
 
 ## License
