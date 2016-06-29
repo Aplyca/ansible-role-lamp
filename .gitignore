@@ -1,5 +1,5 @@
 .vagrant
-custom*
+custom
 *.box
 .vault
 *.retry

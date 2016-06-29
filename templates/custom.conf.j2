@@ -1,0 +1,23 @@
+# {{ ansible_managed }}
+
+ServerName {{ apache.ServerName | default("default") }}
+ServerLimit {{ apache.ServerLimit | default("256") }}
+Options {{ apache.Options | default("FollowSymLinks") }}
+
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+    Order Deny,Allow
+    Deny from all
+    Require all denied
+</Directory>
+
+<DirectoryMatch "/\.git">
+    Require all denied
+</DirectoryMatch>
+
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noe
