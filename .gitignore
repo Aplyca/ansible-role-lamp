@@ -3,3 +3,4 @@ custom
 *.box
 .vault
 *.retry
+**/roles

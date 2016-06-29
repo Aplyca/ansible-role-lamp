@@ -1,24 +1,13 @@
-general:
-  build_dir: tests
-
 dependencies:
   pre:
-    - sudo pip install paramiko PyYAML jinja2 httplib2
-    - sudo pip install ansible
+    - sudo pip install -r tests/requirements.txt
 
 machine:
-  environment:
-    PLAYBOOK: playbook.yml
   hosts:
     myapp.com: 127.0.0.1
 
 test:
   pre:
-    - sudo ln -s ansible-role-lamp ../../aplyca.LAMP
+    - sudo ln -s ansible-role-lamp ../../Aplyca.LAMP
   override:
-    # Install dependencies
-    - ansible-galaxy install -r dependencies.txt
-    - ansible-playbook $PLAYBOOK --syntax-check
-    - ansible-playbook $PLAYBOOK --connection=local
-    - "ansible-playbook $PLAYBOOK --connection=local | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)"
-    - "./tests.sh"
+    - tests/tests.sh
