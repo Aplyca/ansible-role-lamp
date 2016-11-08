@@ -3,7 +3,7 @@ php:
   modules:
     - cli
     - mysql
-  core:  
+  core:
     expose_php: 'Off'
     max_execution_time: '120'
     memory_limit: '256M'

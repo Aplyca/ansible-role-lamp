@@ -11,7 +11,7 @@ install:
   - sudo pip install -r tests/requirements.txt
 
 script:
-  - tests/tests.sh
+  - tests/test.sh
 
 notifications:
   email: false

@@ -1,8 +1,8 @@
 ---
-- name: Ensure Apache PHP 5 module is present using apt
+- name: Ensure Apache PHP 5.6 module is present using apt
   become: yes
   apt:
-    name: libapache2-mod-php5
+    name: libapache2-mod-php5.6
     state: present
   notify: restart apache
 
