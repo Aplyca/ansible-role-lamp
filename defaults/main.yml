@@ -2,6 +2,7 @@
 php:
   modules:
     - cli
+    - mbstring
     - mysql
   core:
     expose_php: 'Off'
