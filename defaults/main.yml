@@ -1,4 +1,20 @@
 ---
+apache:
+  config:
+    ServerLimit: 256
+    Options: "FollowSymLinks"
+  sections:
+    Directory:
+      - "/":
+        - "Options FollowSymLinks"
+        - "AllowOverride None"
+        - "Order Deny,Allow"
+        - "Deny from all"
+        - "Require all denied"
+  ssl:
+    SSLProtocol: "all -SSLv2 -SSLv3 -TLSv1"
+    SSLCipherSuite: "ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS"
+
 php:
   modules:
     - cli

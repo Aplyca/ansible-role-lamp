@@ -4,5 +4,3 @@
 
 - include: setup-Debian.yml
   when: ansible_os_family == 'Debian'
-
-- include: post-setup.yml

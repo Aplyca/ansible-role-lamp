@@ -5,5 +5,3 @@
     name: "{{ php_package }}"
     state: present
   notify: reload apache
-
-- include: setup.yml

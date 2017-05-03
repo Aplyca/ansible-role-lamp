@@ -5,11 +5,3 @@
     name: libapache2-mod-php5.6
     state: present
   notify: restart apache
-
-- include: setup.yml
-
-- name: Enable custom configuration in Apache
-  become: yes
-  command: a2enconf custom
-  notify: reload apache
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version | version_compare('14.04', 'ge')

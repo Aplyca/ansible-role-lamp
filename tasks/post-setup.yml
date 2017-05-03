@@ -1,9 +1,0 @@
----
-- name: Make sure the custom enabled configuration are present
-  become: yes
-  file:
-    src: "../{{ apache.conf_available_path }}/custom.conf"
-    path: "{{ apache.server_root }}/{{ apache.conf_enabled_path }}/custom.conf"
-    state: link
-    force: yes
-  notify: reload apache
