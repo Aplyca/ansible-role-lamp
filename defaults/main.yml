@@ -3,6 +3,8 @@ apache:
   config:
     ServerLimit: 256
     Options: "FollowSymLinks"
+    ServerTokens: "Prod"
+    ServerSignature: "Off"
   sections:
     Directory:
       - "/":
