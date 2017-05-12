@@ -7,6 +7,7 @@
     - name: Test if Apache is installed and running
       uri:
         url: "http://localhost"
+        status_code: 403
       changed_when: False
     - name: Test if MySQL extension for PHP is installed
       shell: "php -i"

@@ -1,7 +1,6 @@
 ---
 apache:
   config:
-    ServerLimit: 256
     Options: "FollowSymLinks"
     ServerTokens: "Prod"
     ServerSignature: "Off"
@@ -18,12 +17,6 @@ apache:
     SSLCipherSuite: "ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS"
 
 php:
-  modules:
-    - cli
-    - mbstring
-    - mysql
   core:
     expose_php: 'Off'
-    max_execution_time: '120'
-    memory_limit: '256M'
     variables_order: 'EGPCS'
