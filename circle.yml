@@ -8,6 +8,6 @@ machine:
 
 test:
   pre:
-    - sudo ln -s ansible-role-lamp ../../Aplyca.LAMP
+    - sudo ln -s ansible-role-lemp ../../Aplyca.LEMP
   override:
     - tests/test.sh

@@ -1,8 +1,8 @@
 Vagrant.configure(2) do |config|
-  config.vm.define "lamp.vagrant", primary: true, autostart: true do |config_machine|
+  config.vm.define "lemp.vagrant", primary: true, autostart: true do |config_machine|
       #Assigning a provider
       config_machine.vm.provider :virtualbox do |virtualbox, override|
-        virtualbox.name = "Vagrant LAMP"
+        virtualbox.name = "Vagrant LEMP"
         #override.vm.box = "chef/centos-7.0"
        override.vm.box = "ubuntu/xenial64"
       end
