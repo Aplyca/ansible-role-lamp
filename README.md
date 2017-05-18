@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/Aplyca/ansible-role-lamp.svg?branch=master)](https://travis-ci.org/Aplyca/ansible-role-lamp)
 [![Circle CI](https://circleci.com/gh/Aplyca/ansible-role-lamp.png?style=badge)](https://circleci.com/gh/Aplyca/ansible-role-lamp)
 
-Ansible Role that installs and configure LEMP Stack on Debian/Ubuntu.
+Ansible Role that installs and configure LAMP Stack on Debian/Ubuntu.
 
 ## Requirements
 
