@@ -1,12 +1,12 @@
 ---
 dependencies:
   - { role: Aplyca.MySQL, tags: ["mysql"] }
-  - { role: Aplyca.Nginx, tags: ["nginx"] }
-  - { role: Aplyca.PHP, tags: ["php"], php: {  modules: [cli, mbstring, mysql, php5.6-fpm] } }
+  - { role: Aplyca.Apache, tags: ["apache"], apache: { enable_modules: [ssl, rewrite, expires, headers] } }
+  - { role: Aplyca.PHP, tags: ["php"], php: {  modules: [cli, mbstring, mysql] } }
 
 galaxy_info:
   author: Aplyca
-  description: LEMP server for Debian/Ubuntu.
+  description: LAMP server for Debian/Ubuntu.
   company: "Aplyca SAS"
   license: "license (BSD, MIT)"
   min_ansible_version: 1.4
@@ -22,3 +22,4 @@ galaxy_info:
     - all
   categories:
     - web
+
