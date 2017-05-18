@@ -1,11 +1,7 @@
 ---
-
-- name: restart nginx
+- name: Ensure Apache PHP 5.6 module is present using apt
   become: yes
-  service: name=nginx state=restarted enabled=yes
-
-#- name: restart php-fpm
-#  service:
-#    name: "{{ php_fpm_daemon }}"
-#    state: restarted
-#  when: php_enable_php_fpm
+  apt:
+    name: libapache2-mod-php5.6
+    state: present
+  notify: restart apache
