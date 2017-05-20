@@ -15,8 +15,19 @@ apache:
   ssl:
     SSLProtocol: "all -SSLv2 -SSLv3 -TLSv1"
     SSLCipherSuite: "ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS"
+  enable_modules:
+    - ssl
+    - rewrite
+    - expires
+    - headers
 
 php:
-  core:
-    expose_php: 'Off'
-    variables_order: 'EGPCS'
+  config:
+    - name: ALL
+      ini:
+        expose_php: 'Off'
+        variables_order: 'EGPCS'
+  modules:
+    - cli
+    - mbstring
+    - mysql

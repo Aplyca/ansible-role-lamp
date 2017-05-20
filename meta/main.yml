@@ -1,8 +1,8 @@
 ---
 dependencies:
   - { role: Aplyca.MySQL, tags: ["mysql"] }
-  - { role: Aplyca.Apache, tags: ["apache"], apache: { enable_modules: [ssl, rewrite, expires, headers] } }
-  - { role: Aplyca.PHP, tags: ["php"], php: {  modules: [cli, mbstring, mysql] } }
+  - { role: Aplyca.Apache, tags: ["apache"] }
+  - { role: Aplyca.PHP, tags: ["php"] }
 
 galaxy_info:
   author: Aplyca

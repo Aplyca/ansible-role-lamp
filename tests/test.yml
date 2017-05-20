@@ -2,8 +2,9 @@
 apache:
   virtualhosts:
     - directives:
-        ServerName: myapp.com
-        ServerAlias:
-          - "*.myapp.com"
-          - "myapp.org"
-          - "*.myapp.org"
+        core:
+          ServerName: myapp.com
+          ServerAlias:
+            - "*.myapp.com"
+            - "myapp.org"
+            - "*.myapp.org"
